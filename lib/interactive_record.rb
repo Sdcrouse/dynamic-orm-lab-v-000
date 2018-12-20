@@ -102,6 +102,8 @@ class InteractiveRecord
   # end
   
   def save_v2
+    # This is based on the code from the video "Building a Metaprogrammed Abstract ORM"
+    
     sql = <<-SQL 
       INSERT INTO #{table_name_for_insert} (#{col_names_for_insert}) 
       VALUES (#{question_marks_for_insert})
