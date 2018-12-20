@@ -106,7 +106,7 @@ class InteractiveRecord
   end
   
   def question_marks_for_insert
-    
+    self.class.column_names[1..-1].size.times
   end
   
   def self.find_by_name(name)
