@@ -113,6 +113,7 @@ class InteractiveRecord
     binding.pry
     
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM #{table_name_for_insert}")[0][0]
+    binding.pry
   end
   
   def question_marks_for_insert
