@@ -35,6 +35,10 @@ class InteractiveRecord
     values.compact.join(", ")
   end
   
+  def values_for_insert_v2
+    
+  end
+  
   def save
     # Just to satisfy my need to refactor this thing:
     save_v2
