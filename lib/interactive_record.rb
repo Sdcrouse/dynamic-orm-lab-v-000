@@ -104,7 +104,7 @@ class InteractiveRecord
       VALUES (#{question_marks_for_insert})
     SQL
     
-    DB[:conn].execute(sql, )
+    DB[:conn].execute(sql, *values_for_insert_v2)
     binding.pry
   end
   
