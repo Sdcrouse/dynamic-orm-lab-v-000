@@ -37,8 +37,11 @@ class InteractiveRecord
   
   def values_for_insert_v2
     # Due to the difference in how the values are inserted into the database (directly vs. with bound parameters), calling values_for_insert.split(", ") won't work.
-    # That would cause a Student to have these values: [{"id"=>1, "name"=>"'Sam'", "grade"=>"'11'", 0=>1, 1=>"'Sam'", 2=>"'11'"}]
-    # instead of these values: [{"id"=>1, "name"=>"Sam", "grade"=>11, 0=>1, 1=>"Sam", 2=>11}].
+    
+    # That would cause a Student to have these values: 
+    # [{"id"=>1, "name"=>"'Sam'", "grade"=>"'11'", 0=>1, 1=>"'Sam'", 2=>"'11'"}]
+    # instead of these values: 
+    # [{"id"=>1, "name"=>"Sam", "grade"=>11, 0=>1, 1=>"Sam", 2=>11}].
     
     self.class.column_names.collect {|col_name| self.send(col_name)}.compact
     binding.pry
