@@ -36,6 +36,9 @@ class InteractiveRecord
   end
   
   def save
+    # Just to satisfy my need to refactor this thing:
+    save_v2
+    
     # The following code is probably what they're looking for:
     
     # sql = <<-SQL 
