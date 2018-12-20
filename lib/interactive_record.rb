@@ -38,9 +38,7 @@ class InteractiveRecord
   def values_for_insert_v2
     # Due to the difference in how the values are inserted into the database (directly vs. with bound parameters), calling values_for_insert.split(", ") won't work
     
-    self.class.column_names.collect do |col_name| 
-      self.send(col_name) unless self.send(col_name).nil?
-    end.compact
+    self.class.column_names.collect {|col_name| self.send(col_name)}.compact
   end
   
   def save
