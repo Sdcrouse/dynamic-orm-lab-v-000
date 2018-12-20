@@ -36,6 +36,7 @@ class InteractiveRecord
   end
   
   def values_for_insert_v2
+    binding.pry
     values_for_insert.split(", ")
   end
   
