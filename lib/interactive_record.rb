@@ -39,6 +39,7 @@ class InteractiveRecord
     # Due to the difference in how the values are inserted into the database (directly vs. with bound parameters), calling values_for_insert.split(", ") won't work
     
     self.class.column_names.collect {|col_name| self.send(col_name)}.compact
+    binding.pry
   end
   
   def save
