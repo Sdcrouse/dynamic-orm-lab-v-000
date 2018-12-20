@@ -103,6 +103,8 @@ class InteractiveRecord
       INSERT INTO #{table_name_for_insert} (#{col_names_for_insert}) 
       VALUES (#{question_marks_for_insert})
     SQL
+    
+    DB[:conn].execute(sql, )
     binding.pry
   end
   
