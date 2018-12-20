@@ -36,7 +36,9 @@ class InteractiveRecord
   end
   
   def values_for_insert_v2
-    
+    self.class.column_names.collect do |col_name| 
+      self.send(col_name) unless self.send(col_name).nil?
+    end.compact
   end
   
   def save
