@@ -36,7 +36,7 @@ class InteractiveRecord
   end
   
   def values_for_insert_v2
-    values_for_insert.split(", ")
+    
   end
   
   def save
