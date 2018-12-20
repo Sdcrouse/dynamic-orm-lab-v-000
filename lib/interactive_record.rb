@@ -44,7 +44,6 @@ class InteractiveRecord
     # [{"id"=>1, "name"=>"Sam", "grade"=>11, 0=>1, 1=>"Sam", 2=>11}]. Tricky bug!!!
     
     self.class.column_names.collect {|col_name| self.send(col_name)}.compact
-    binding.pry
   end
   
   def save
