@@ -103,6 +103,7 @@ class InteractiveRecord
       INSERT INTO #{table_name_for_insert} (#{col_names_for_insert}) 
       VALUES (#{question_marks_for_insert})
     SQL
+    binding.pry
   end
   
   def question_marks_for_insert
