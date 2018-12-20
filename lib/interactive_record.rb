@@ -99,7 +99,7 @@ class InteractiveRecord
   # end
   
   def save_v2
-    
+    sql = "INSERT INTO #{table_name_for_insert} #{question_marks_for_insert} VALUES ?"
   end
   
   def self.find_by_name(name)
