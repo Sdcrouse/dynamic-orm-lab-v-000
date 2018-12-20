@@ -99,7 +99,10 @@ class InteractiveRecord
   # end
   
   def save_v2
-    sql = "INSERT INTO #{table_name_for_insert} (#{question_marks_for_insert}) VALUES (?)"
+    sql = <<-SQL 
+      INSERT INTO #{table_name_for_insert} (#{col_names_for_insert}) 
+      VALUES (#{question_marks_for_insert})
+    SQL
   end
   
   def question_marks_for_insert
